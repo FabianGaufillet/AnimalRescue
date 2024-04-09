@@ -1,0 +1,10 @@
+header:after {
+    display: block;
+    content: "";
+    width: 100vw;
+    height: 250px;
+    background-image: url('../images/panda.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
