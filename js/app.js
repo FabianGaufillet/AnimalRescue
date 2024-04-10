@@ -1,13 +1,10 @@
 "use strict";
 
+import {loadContent} from "./loadcontent.js";
+
 ($ => {
-    const $tabEl = $('button[data-bs-toggle="pill"]');
-    $tabEl.each((index, el) => {
-        $(el).on('shown.bs.tab', event => {
-            /*
-               event.target // newly activated tab
-               event.relatedTarget // previous active tab
-            */
-        })
-    })
+    const $context = $("div#navbarContent"),
+          $activePage = $("a.nav-link.active",$context),
+          page = $activePage.data("page") ?? 'home';
+    loadContent(page);
 })(jQuery)

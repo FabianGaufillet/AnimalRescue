@@ -14,79 +14,58 @@
     <script src="js/jquery-3.7.1.min.js" defer></script>
     <script src="js/bootstrap-5.3.3-dist/bootstrap.bundle.min.js" defer></script>
     <script src="icons/fontawesome-6.5.2/js/all.min.js" defer></script>
-    <script src="js/app.js" defer></script>
+    <script src="js/app.js" type="module" defer></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <i class="fa-solid fa-cat"></i><a class="navbar-brand" href="#">Animal Rescue</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Adoptez-les !
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Chats</a></li>
-                            <li><a class="dropdown-item" href="#">Chiens</a></li>
-                            <li><a class="dropdown-item" href="#">Hamsters</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Vaches</a></li>
-                            <li><a class="dropdown-item" href="#">Chevaux</a></li>
-                            <li><a class="dropdown-item" href="#">Moutons</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Autres...</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Démarches</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nous contacter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Nous rencontrer</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <div class="input-group">
-                        <span class="input-group-text" id="navSearch"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control" placeholder="Rechercher..." aria-label="Search" aria-describedby="navSearch">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </nav>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+              <i class="fa-solid fa-cat"></i><a class="navbar-brand" href="#">Animal Rescue</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#" data-page="home">Accueil</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Adoptez-les !
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Chats</a></li>
+                              <li><a class="dropdown-item" href="#">Chiens</a></li>
+                              <li><a class="dropdown-item" href="#">Hamsters</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Vaches</a></li>
+                              <li><a class="dropdown-item" href="#">Chevaux</a></li>
+                              <li><a class="dropdown-item" href="#">Moutons</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Autres...</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Démarches</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Nous contacter</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link disabled" aria-disabled="true">Nous rencontrer</a>
+                      </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                      <div class="input-group">
+                          <span class="input-group-text" id="navSearch"><i class="fa-solid fa-magnifying-glass"></i></span>
+                          <input type="text" class="form-control" placeholder="Rechercher..." aria-label="Search" aria-describedby="navSearch">
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </nav>
   </header>
   <main>
-      <h1 class="display-6 text-center mb-4 mt-4">
-          Bienvenue sur le site de l'association Animal Rescue.
-      </h1>
-      <div class="d-flex align-items-start">
-          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link active" id="v-pills-presentation-tab" data-bs-toggle="pill" data-bs-target="#v-pills-presentation" type="button" role="tab" aria-controls="v-pills-presentation" aria-selected="true">Présentation</button>
-              <button class="nav-link" id="v-pills-contribution-tab" data-bs-toggle="pill" data-bs-target="#v-pills-contribution" type="button" role="tab" aria-controls="v-pills-contribution" aria-selected="false">Contribuer</button>
-              <button class="nav-link" id="v-pills-advices-tab" data-bs-toggle="pill" data-bs-target="#v-pills-advices" type="button" role="tab" aria-controls="v-pills-advices" aria-selected="false">Conseils</button>
-              <button class="nav-link" id="v-pills-memorial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-memorial" type="button" role="tab" aria-controls="v-pills-memorial" aria-selected="false">Mémorial</button>
-              <button class="nav-link" id="v-pills-partners-tab" data-bs-toggle="pill" data-bs-target="#v-pills-partners" type="button" role="tab" aria-controls="v-pills-partners" aria-selected="false">Partenaires</button>
-              <button class="nav-link" id="v-pills-newsletter-tab" data-bs-toggle="pill" data-bs-target="#v-pills-newsletter" type="button" role="tab" aria-controls="v-pills-newsletter" aria-selected="false" disabled>Newsletter</button>
-          </div>
-          <div class="tab-content" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-presentation" role="tabpanel" aria-labelledby="v-pills-presentation-tab" tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aspernatur illo laudantium recusandae. Alias dolorum facilis mollitia neque provident quasi quidem rerum sed similique tenetur! Eius nostrum placeat quod?</div>
-              <div class="tab-pane fade" id="v-pills-contribution" role="tabpanel" aria-labelledby="v-pills-contribution-tab" tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem, eligendi et id incidunt magnam ratione vel veritatis. Ea error ex non quibusdam sapiente, soluta. Cupiditate eius magni possimus veniam?</div>
-              <div class="tab-pane fade" id="v-pills-advices" role="tabpanel" aria-labelledby="v-pills-advices-tab" tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos error nostrum omnis optio. Accusantium animi ea eius et explicabo labore maiores, natus, obcaecati optio perspiciatis quis quos repellendus sapiente tenetur.</div>
-              <div class="tab-pane fade" id="v-pills-memorial" role="tabpanel" aria-labelledby="v-pills-memorial-tab" tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi cum dolor impedit minus perferendis, quidem quisquam sunt veniam voluptatibus. Atque aut optio quasi quod sapiente unde vitae! Et, nam?</div>
-              <div class="tab-pane fade" id="v-pills-partners" role="tabpanel" aria-labelledby="v-pills-partners-tab" tabindex="0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus aperiam dolorem eius fugiat magni nemo numquam quam, suscipit tempora, tempore, ullam. Alias autem, doloribus impedit iste nisi quidem vitae.</div>
-              <div class="tab-pane fade" id="v-pills-newsletter" role="tabpanel" aria-labelledby="v-pills-newsletter-tab" tabindex="0">...</div>
-          </div>
-      </div>
   </main>
   <footer class="bg-body-tertiary text-center border-top mt-auto">
     <div class="container p-2">
